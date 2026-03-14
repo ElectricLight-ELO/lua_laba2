@@ -1,5 +1,12 @@
-local name = "World"
-local version = 1
+local function sum_digitals(...)
+    local total = 0
+    for _, v in ipairs({...}) do
+        total = total + v
+    end
+    return total
+end
 
-print("Hello, World!")
-print("test: " .. version)
+local sum = 0
+sum = sum_digitals(1, 2,3,4,2,1)
+
+print(sum)
