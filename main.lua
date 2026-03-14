@@ -1,12 +1,14 @@
-local function sum_digitals(...)
-    local total = 0
-    for _, v in ipairs({...}) do
-        total = total + v
-    end
+local function find_factorial(num)
+    local total = 1
+    local i = 0
+        while i < num do
+            total = total * i
+            i = i + 1
+        end
     return total
 end
 
-local sum = 0
-sum = sum_digitals(1, 2,3,4,2,1)
+local dig = 0
+dig = find_factorial(3)
 
-print(sum)
+print(dig)
