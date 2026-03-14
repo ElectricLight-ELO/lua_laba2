@@ -1,7 +1,7 @@
 local function find_factorial(num)
     local total = 1
-    local i = 0
-        while i < num do
+    local i = 1
+        while i <= num do
             total = total * i
             i = i + 1
         end
