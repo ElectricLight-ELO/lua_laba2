@@ -11,4 +11,20 @@ end
 local dig = 0
 dig = find_factorial(3)
 
-print(dig)
+
+-- тестирую работу словарей
+local map = {}
+
+local function main()
+    map["apple"] = 5
+    map["banana"] = 10
+
+
+    if map["banana"] ~= nil then
+        print("есть")
+        print(map["banana"])
+    end
+end
+
+-- создал для удобства точку входа
+main()
