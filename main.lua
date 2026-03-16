@@ -8,14 +8,25 @@ local function find_factorial(num)
     return total
 end
 
-local dig = 0
-dig = find_factorial(3)
 
 
 -- тестирую работу словарей
 local map = {}
+local function call_with_caching(digit)
+    if map[digit] ~= nil then
+        return map[digit]
+    end
+
+    local factr_digit = find_factorial(digit) 
+    map[digit] = factr_digit
+    return factr_digit
+end
 
 local function main()
+
+    local dig = 0
+    dig = find_factorial(3)
+
     map["apple"] = 5
     map["banana"] = 10
 
