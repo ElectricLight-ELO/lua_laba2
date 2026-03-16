@@ -24,11 +24,22 @@ end
 
 local function main()
 
+    local start = os.clock()
     for i = 1,170 do
         local dig = call_with_caching(i)
         print(dig)
     end
-    
+    local elapsed = os.clock() - start
+    print(string.format("Время: %.6f сек", elapsed))
+
+    --- повторный поиск с кешированием
+    local start = os.clock()
+    for i = 1,170 do
+        local dig = call_with_caching(i)
+        print(dig)
+    end
+    local elapsed = os.clock() - start
+    print(string.format("Время: %.6f сек", elapsed))
 end
 
 -- создал для удобства точку входа
