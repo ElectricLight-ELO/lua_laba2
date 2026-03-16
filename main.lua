@@ -1,5 +1,5 @@
 local function find_factorial(num)
-    local total = 1
+    local total = 1.0
     local i = 1
         while i <= num do
             total = total * i
@@ -24,17 +24,11 @@ end
 
 local function main()
 
-    local dig = 0
-    dig = find_factorial(3)
-
-    map["apple"] = 5
-    map["banana"] = 10
-
-
-    if map["banana"] ~= nil then
-        print("есть")
-        print(map["banana"])
+    for i = 1,170 do
+        local dig = call_with_caching(i)
+        print(dig)
     end
+    
 end
 
 -- создал для удобства точку входа
