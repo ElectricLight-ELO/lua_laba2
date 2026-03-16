@@ -27,7 +27,7 @@ local function main()
     local start = os.clock()
     for i = 1,170 do
         local dig = call_with_caching(i)
-        print(dig)
+      ---  print(dig)
     end
     local elapsed = os.clock() - start
     print(string.format("Время: %.6f сек", elapsed))
@@ -36,7 +36,7 @@ local function main()
     local start = os.clock()
     for i = 1,170 do
         local dig = call_with_caching(i)
-        print(dig)
+       --- print(dig)
     end
     local elapsed = os.clock() - start
     print(string.format("Время: %.6f сек", elapsed))
